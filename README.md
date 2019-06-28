@@ -12,14 +12,13 @@ console.log(
     {
         // The DataArray result
         dataArray,
-        // 'typedArray' is a raw flat TypedArray from the buffer
-        // Will be a different typed array based on the numpy dtype - such as Float64Array, Int32Array, Uint8Array, ect
+        // 'typedArray' is a TypedArray. see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
         typedArray: dataArray.typedArray,
-        // the shape of the numpy array
+        // The shape of the numpy array
         shape: dataArray.shape,
-        // Converts the flat TypedArray input a nested normal array.
+        // Converts the flat TypedArray into a nested normal array equivalent to what it would be in python.
         array: dataArray.toArray(),
-        // Converts to json
+        // Converts to json string.
         json: dataArray.toJson(),
     }
 )
