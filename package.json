@@ -1,0 +1,40 @@
+{
+  "name": "read-npy-file",
+  "version": "1.0.0",
+  "description": "Read npy files in javascript and convert them to array buffer, nested array and json",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicholas Tancredi",
+  "license": "ISC",
+  "keywords": [
+    "npy",
+    "numpy",
+    "Numpy",
+    "file",
+    "FileReader",
+    "filereader",
+    "reader",
+    ".npy",
+    "python",
+    "ArrayBuffer",
+    "DataView",
+    "DataArray",
+    "data"
+  ],
+  "devDependencies": {
+    "@types/node": "^12.0.10",
+    "typescript": "^3.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicholasTancredi/read-npy-file.git"
+  },
+  "dependencies": {
+    "@petamoriken/float16": "^1.1.0",
+    "numjs": "^0.16.0"
+  }
+}
