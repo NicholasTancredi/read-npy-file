@@ -1,6 +1,6 @@
 {
   "name": "read-npy-file",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Read npy files in javascript and convert them to array buffer, nested array and json",
   "main": "index.js",
   "types": "index.d.ts",
