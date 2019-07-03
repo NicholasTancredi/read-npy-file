@@ -1,6 +1,6 @@
 {
   "name": "read-npy-file",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Read npy files in javascript and convert them to array buffer, nested array and json",
   "main": "index.js",
   "types": "index.d.ts",
@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "@petamoriken/float16": "^1.1.0",
-    "static-eval": ">=2.0.0",
     "numjs": "^0.16.0"
   }
 }

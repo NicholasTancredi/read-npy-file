@@ -1,4 +1,4 @@
-import { readFileSync, existsSync } from 'fs'
+import { readFileSync, existsSync, PathLike } from 'fs'
 import nj from 'numjs'
 import { Float16Array } from "@petamoriken/float16"
 
@@ -26,14 +26,8 @@ const numEls = (shape: number[]) => {
     }
 }
 
-const read = (filename: string): ArrayBuffer => {
-    const fn = existsSync(filename) ? filename : `${__dirname}/${filename}`
-
-    if (!existsSync(fn)) {
-        throw Error(`FileNotFound: "${fn}" nor "${filename}" exist.`)
-    }
-
-    const ret = bufferToArrayBuffer(readFileSync(fn))
+const read = (filename: PathLike): ArrayBuffer => {
+    const ret = bufferToArrayBuffer(readFileSync(filename))
 
     if (ret.byteLength <= 5) {
         throw RangeError(
@@ -82,7 +76,7 @@ export class DataArray {
     toJson = (): string => JSON.stringify(this.toArray())
 }
 
-const readNumpyFile = (filename: string): DataArray => {
+const readNumpyFile = (filename: PathLike): DataArray => {
     const ab = read(filename)
 
     const view = new DataView(ab)
